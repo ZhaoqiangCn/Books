@@ -1,38 +1,8 @@
-# Python
-
-## 1.排错
-
-### ModuleNotFoundError: No module named 'requests'
-
-由于Pycharm新建项目的时候是在虚拟环境中运行解释器，所以没有安装Requests。
-
-解决办法：在Pycharm中打开，执行pip install requests
-
-![](.gitbook/assets/image.png)
-
-### indexerror: list index out of range
-
-一般列表是空的未读取到数据的情况会报此错误。
-
-解决办法：在处理数据之前加入判断条件
-
-```python
-def get_contents(self, target):
-    req = requests.get(url=target)
-    html = req.text
-    bf = BeautifulSoup(html,"html.parser")
-    texts = bf.find_all('div', class_='showtxt')
-    if(len(texts)):
-        print(texts[0])
-        texts = texts[0].text.replace('\xa0' * 8, '\n\n')
-    else:
-        dl.get_contents(target)
-    return texts
-```
+# 第一章 - Python
 
 
 
-## 2.笔记
+## 1.笔记
 
 ### 爬虫心得
 
@@ -65,4 +35,38 @@ class Student(object):
     def set_score(self, score):
         self.__score = score
 ```
+
+## 2.排错
+
+### ModuleNotFoundError: No module named 'requests'
+
+由于Pycharm新建项目的时候是在虚拟环境中运行解释器，所以没有安装Requests。
+
+解决办法：在Pycharm中打开，执行pip install requests
+
+![](.gitbook/assets/image.png)
+
+### indexerror: list index out of range
+
+一般列表是空的未读取到数据的情况会报此错误。
+
+解决办法：在处理数据之前加入判断条件
+
+```python
+def get_contents(self, target):
+    req = requests.get(url=target)
+    html = req.text
+    bf = BeautifulSoup(html,"html.parser")
+    texts = bf.find_all('div', class_='showtxt')
+    if(len(texts)):
+        print(texts[0])
+        texts = texts[0].text.replace('\xa0' * 8, '\n\n')
+    else:
+        dl.get_contents(target)
+    return texts
+```
+
+
+
+
 
