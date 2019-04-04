@@ -6,4 +6,6 @@
 * [1.2 爬虫](1.2-pa-chong-bi-ji.md)
 * [1.3 排错](1.3-pai-cuo.md)
 * [第二章 - Html](chapter-two-html.md)
+* [Markdown 语法](markdown-yu-fa.md)
+* [测试页](ce-shi-ye.md)
 
