@@ -2,6 +2,8 @@
 
 ### 创建GCP实例
 
+默认 Debian9 系统，以下代码均在此系统下操作 
+
 ### 安装chromium
 
  编辑`/etc/apt/sources.list`文件并加入下面这句
