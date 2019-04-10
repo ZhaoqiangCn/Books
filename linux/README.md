@@ -1,3 +1,7 @@
+---
+description: Ubuntu & Debian
+---
+
 # 第四章 - Linux
 
 ### 常用指令
