@@ -7,6 +7,7 @@
 * screen -S name 启动一个名字为name的screen
 * screen -ls 是列出所有的screen
 * screen -r name或者id，就可以回到某个screen了
+* screen -S name -X quit 删除screen
 * ctrl + a + d 可以回到前一个screen，当时在当前screen运行的程序不会停止
 
 #### Rclone
