@@ -24,5 +24,20 @@ rclone copy -v drivefrom:CopyFromShare/M1-50 driveto:CopyFromShare/M1-250
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
+#### Shell脚本
+
+{% code-tabs %}
+{% code-tabs-item title="Shell" %}
+```text
+#!/bin/bash
+echo "Hello world!"
+
+chmod +x hello.sh
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+
+
 
 
