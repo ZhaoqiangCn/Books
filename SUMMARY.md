@@ -7,7 +7,7 @@
 * [1.3 排错](1.3-pai-cuo.md)
 * [第二章 - Html](chapter-two-html.md)
 * [第三章 - Chromium](di-san-zhang-pandalearning.md)
-* [Markdown 语法](markdown-yu-fa.md)
-* [Linux](linux.md)
+* [第五章 - Markdown](markdown-yu-fa.md)
+* [第四章 - Linux](linux.md)
 * [测试页](ce-shi-ye.md)
 
