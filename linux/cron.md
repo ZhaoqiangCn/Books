@@ -78,5 +78,35 @@ crontab –ir
 crontab –e
 ```
 
+### 用Crontab调度作业 
+
+可以使用指定的语法调度cron作业，而且还有速记缩写命令，使的管理cron作业很简单。 Crontab语法如下：
+
+```text
+* * * * * command to be executed
+- - - - - -
+| | | | | |
+| | | | | --- 预执行的命令
+| | | | ----- 表示星期0～7（其中星期天可以用0或7表示）
+| | | ------- 表示月份1～12
+| | --------- 表示日期1～31
+| ----------- 表示小时1～23（0表示0点）
+------------- 表示分钟1～59 每分钟用*或者 */1表示
+```
+
+### Cron作业配置实例 <a id="&#x516D;&#x65B0;cron&#x4F5C;&#x4E1A;&#x914D;&#x7F6E;&#x5B9E;&#x4F8B;"></a>
+
+下面的例子，创建一个cron作业，它每分钟输出文本“test cron job to execute every minute”并把文本发送到user@vexxhost.com邮箱。 首先用crontab命令编辑
+
+```text
+SHELL=/bin/bash
+HOME=/
+MAILTO=”user@vexxhost.com”
+#This is a comment
+* * * * * echo 'test cron job to execute every minute'
+```
+
+
+
 
 

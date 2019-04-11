@@ -1,4 +1,4 @@
-# 1.3 排错
+# 排错
 
 ### ModuleNotFoundError: No module named 'requests'
 
@@ -6,7 +6,7 @@
 
 解决办法：在Pycharm中打开，执行pip install requests
 
-![](.gitbook/assets/image.png)
+![](../.gitbook/assets/image.png)
 
 ### indexerror: list index out of range
 
