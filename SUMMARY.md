@@ -1,15 +1,17 @@
 # Table of contents
 
 * [前言](README.md)
-* [第一章 - Python](python/README.md)
+* [第一章 - Python基础](python/README.md)
   * [语法](python/yu-fa.md)
-  * [爬虫](python/pa-chong.md)
   * [排错](python/pai-cuo.md)
-* [第二章 - Html](chapter-two-html.md)
-* [第三章 - Chromium](di-san-zhang-pandalearning.md)
-* [第五章 - Markdown](markdown-yu-fa.md)
+* [第二章 - WEB开发](web-kai-fa/README.md)
+  * [Html](web-kai-fa/chapter-two-html.md)
+  * [Web框架](web-kai-fa/web-kuang-jia.md)
+  * [Web模板](web-kai-fa/web-mo-ban.md)
+* [第三章 - 爬虫](pa-chong.md)
 * [第四章 - Linux](linux/README.md)
   * [命令](linux/ming-ling.md)
   * [Cron](linux/cron.md)
-* [测试页](ce-shi-ye.md)
+* [第五章 - Markdown](markdown-yu-fa.md)
+* [第六章 - Chromium](di-san-zhang-pandalearning.md)
 
