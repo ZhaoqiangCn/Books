@@ -62,3 +62,18 @@ sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
 sys.stdout.write("Your content....")
 ```
 
+### Screen命令中文乱码
+
+ 其实只要在使用 screen 的时候加一个 **-U** 参数就应该就没问题了
+
+```text
+#创建utf8编码模式的新会话
+screen -U -S new_screen_test
+
+#查看当前会话
+screen -ls
+
+#切换会话(utf8编码查看)
+screen -U -r new_screen_test
+```
+
