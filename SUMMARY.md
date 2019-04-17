@@ -16,4 +16,6 @@
   * [Cron](linux/cron.md)
 * [第五章 - Markdown](markdown-yu-fa.md)
 * [第六章 - Chromium](di-san-zhang-pandalearning.md)
+* [第七章 - GIT](di-qi-zhang-git/README.md)
+  * [命令](di-qi-zhang-git/ji-ben-ming-ling.md)
 
