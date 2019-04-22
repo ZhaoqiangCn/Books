@@ -14,6 +14,7 @@
 * [第四章 - Linux](linux/README.md)
   * [命令](linux/ming-ling.md)
   * [Cron](linux/cron.md)
+  * [Synology](linux/synology.md)
 * [第五章 - Markdown](markdown-yu-fa.md)
 * [第六章 - Chromium](di-san-zhang-pandalearning.md)
 * [第七章 - GIT](di-qi-zhang-git/README.md)
