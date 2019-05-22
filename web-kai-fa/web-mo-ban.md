@@ -1,4 +1,4 @@
-# Web模板
+# WebTemplate
 
 ### Model-View-Controller
 
