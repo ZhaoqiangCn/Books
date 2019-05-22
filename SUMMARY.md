@@ -14,6 +14,7 @@
 * [第四章 - Linux](linux/README.md)
   * [命令](linux/ming-ling.md)
   * [Cron](linux/cron.md)
+  * [OpenWrt](linux/openwrt.md)
   * [Synology](linux/synology/README.md)
     * [Rclone - Install](linux/synology/rclone-install.md)
     * [IPKG - Install](linux/synology/ipkg.md)
