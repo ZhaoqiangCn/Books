@@ -12,7 +12,7 @@
   * [Web模板](web-kai-fa/web-mo-ban.md)
 * [第三章 - 爬虫](pa-chong.md)
 * [第四章 - Linux](linux/README.md)
-  * [命令](linux/ming-ling.md)
+  * [Command](linux/ming-ling.md)
   * [Cron](linux/cron.md)
   * [GoogleCloud](linux/googlecloud/README.md)
     * [Debian9](linux/googlecloud/debian9/README.md)

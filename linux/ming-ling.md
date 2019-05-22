@@ -2,7 +2,7 @@
 description: Ubuntu&Debian 常用命令
 ---
 
-# 命令
+# Command
 
 ### 常用指令
 
