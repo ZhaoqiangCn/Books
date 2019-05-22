@@ -2,7 +2,7 @@
 description: 单网口群晖VMM安装K-LEDE实现旁路模式
 ---
 
-# VMM-LEDE-Install
+# LEDE - Install
 
 ### 基本设置
 
