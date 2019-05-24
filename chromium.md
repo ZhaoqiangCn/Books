@@ -111,6 +111,12 @@ python  get-pip.py   //安装pip2
 pip3 install selenium
 ```
 
+#### 执行
+
+```text
+PYTHONIOENCODING=utf-8 python3 Panda-Learning-2.5/'Source Packages'/pandalearning.py 13482308316
+```
+
 
 
 
