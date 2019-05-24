@@ -22,7 +22,7 @@
   * [LEDE](linux/k-lede.md)
   * [OpenWrt](linux/openwrt/README.md)
     * [Compile](linux/openwrt/compile/README.md)
-      * [Openwrt-last-lean](linux/openwrt/compile/openwrt-last.md)
+      * [Lean-4.14](linux/openwrt/compile/lean-4.14.md)
       * [Lean-4.9](linux/openwrt/compile/lean-4.9.md)
   * [Synology](linux/synology/README.md)
     * [SpeedTest - Install](linux/synology/speedtest-install.md)
