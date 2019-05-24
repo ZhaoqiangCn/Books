@@ -28,11 +28,3 @@ find . -type d -empty -exec touch {}/.gitignore \;
 
 
 
-{% hint style="info" %}
-abcasdasd
-
-## 
-
-asdasdasd阿斯打死打伤打
-{% endhint %}
-
