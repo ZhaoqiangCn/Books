@@ -1,7 +1,3 @@
----
-description: L大源码&SSRPlus ，移植后固件版本为4.14
----
-
 # Openwrt-last-lean
 
 ### 安装依赖
