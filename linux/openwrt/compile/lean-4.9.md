@@ -13,7 +13,7 @@ sudo apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git
 git clone https://github.com/ZhaoqiangCn/lede
 ```
 
-#### 编译切换内核 
+### 切换内核 
 
 ```text
 /target/linux/架构/Makefile 
