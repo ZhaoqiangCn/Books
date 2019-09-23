@@ -1,8 +1,6 @@
 ---
-description: zhaoqiang的学习笔记
+description: Recording my learning process
 ---
 
 # Home
-
-记录我的学习过程
 
