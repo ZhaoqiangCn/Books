@@ -6,7 +6,7 @@
 
 解决办法：在Pycharm中打开，执行pip install requests
 
-![](../.gitbook/assets/image%20%282%29.png)
+![](../../.gitbook/assets/image%20%282%29.png)
 
 ### indexerror: list index out of range
 

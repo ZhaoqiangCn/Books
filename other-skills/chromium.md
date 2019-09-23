@@ -2,7 +2,7 @@
 description: 部署某应用所需
 ---
 
-# 第六章 - Chromium
+# Chromium
 
 ### 创建GCP实例
 
