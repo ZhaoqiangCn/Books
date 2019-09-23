@@ -42,8 +42,11 @@
 ## DynamicsAX
 
 * [Data Import](dynamicsax/import/README.md)
-  * [期初静态数据](dynamicsax/import/qi-chu-jing-tai-shu-ju.md)
-  * [期初动态数据](dynamicsax/import/qi-chu-dong-tai-shu-ju.md)
+  * [Initial Static Data](dynamicsax/import/stadata.md)
+  * [initial Dynamic Data](dynamicsax/import/dynadata/README.md)
+    * [Open SO](dynamicsax/import/dynadata/open-so.md)
+    * [Open PO](dynamicsax/import/dynadata/open-po.md)
+    * [Opening Balance](dynamicsax/import/dynadata/opening-balance.md)
 
 ## Other Skills
 
