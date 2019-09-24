@@ -50,5 +50,5 @@ vi /root/.profile在path这行结尾分号之前，加入：/opt/sbin:/opt/bin�
 
 {% file src="../../../.gitbook/assets/syno-x07-bootstrap\_1.2-7\_arm.rar" %}
 
-
+{% file src="../../../.gitbook/assets/syno-i686-bootstrap\_1.2-7\_i686.rar" %}
 
