@@ -44,6 +44,7 @@
 * [Functions](dynamicsax/functions/README.md)
   * [Email Alert](dynamicsax/functions/email-alert.md)
   * [Auto Items](dynamicsax/functions/auto-items.md)
+  * [Auto BOM](dynamicsax/functions/auto-bom.md)
   * [Auto Order](dynamicsax/functions/auto-order.md)
   * [Auto Invoice](dynamicsax/functions/auto-invoice.md)
   * [Auto Packing](dynamicsax/functions/auto-packing.md)
