@@ -48,7 +48,7 @@ http://ipkg.nslu2-linux.org/feeds/optware/syno-i686/cross/unstable/
 
 vi /root/.profile在path这行结尾分号之前，加入：/opt/sbin:/opt/bin最后保存即可，生效只需录入su切换下用户或者重启就行。 
 
-{% file src="../../../.gitbook/assets/syno-x07-bootstrap\_1.2-7\_arm.rar" %}
+{% file src="../../.gitbook/assets/syno-x07-bootstrap\_1.2-7\_arm.rar" %}
 
-{% file src="../../../.gitbook/assets/syno-i686-bootstrap\_1.2-7\_i686.rar" %}
+{% file src="../../.gitbook/assets/syno-i686-bootstrap\_1.2-7\_i686.rar" %}
 

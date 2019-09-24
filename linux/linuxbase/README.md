@@ -2,5 +2,5 @@
 description: Ubuntu & Debian & Synology
 ---
 
-# Linux
+# Linux Base
 
