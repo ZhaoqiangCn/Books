@@ -42,6 +42,8 @@
 ## DynamicsAX
 
 * [Functions](dynamicsax/functions/README.md)
+  * [DirectSQL](dynamicsax/functions/directsql.md)
+  * [Webservice](dynamicsax/functions/webservice.md)
   * [DB Connect](dynamicsax/functions/db-connect.md)
   * [Email Alert](dynamicsax/functions/email-alert.md)
   * [Auto Items](dynamicsax/functions/auto-items.md)
