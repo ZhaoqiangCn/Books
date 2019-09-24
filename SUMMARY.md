@@ -41,6 +41,11 @@
 
 ## DynamicsAX
 
+* [Functions](dynamicsax/functions/README.md)
+  * [Auto Items](dynamicsax/functions/auto-items.md)
+  * [Auto Order](dynamicsax/functions/auto-order.md)
+  * [Auto Invoice](dynamicsax/functions/auto-invoice.md)
+  * [Auto Packing](dynamicsax/functions/auto-packing.md)
 * [Data Import](dynamicsax/import/README.md)
   * [Initial Static Data](dynamicsax/import/stadata.md)
   * [initial Dynamic Data](dynamicsax/import/dynadata/README.md)
