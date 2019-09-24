@@ -42,6 +42,7 @@
 ## DynamicsAX
 
 * [Functions](dynamicsax/functions/README.md)
+  * [DB Connect](dynamicsax/functions/db-connect.md)
   * [Email Alert](dynamicsax/functions/email-alert.md)
   * [Auto Items](dynamicsax/functions/auto-items.md)
   * [Auto BOM](dynamicsax/functions/auto-bom.md)
