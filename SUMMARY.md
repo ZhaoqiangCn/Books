@@ -42,6 +42,7 @@
 ## DynamicsAX
 
 * [Functions](dynamicsax/functions/README.md)
+  * [Email Alert](dynamicsax/functions/email-alert.md)
   * [Auto Items](dynamicsax/functions/auto-items.md)
   * [Auto Order](dynamicsax/functions/auto-order.md)
   * [Auto Invoice](dynamicsax/functions/auto-invoice.md)
