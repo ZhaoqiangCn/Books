@@ -1,4 +1,10 @@
+---
+description: 期初上线阶段的Open销售订单导入
+---
+
 # Open SO
+
+#### 读取系统文件夹内待导入文件
 
 {% code-tabs %}
 {% code-tabs-item title="ReadFile" %}
@@ -42,4 +48,12 @@ container ReadTextFile(FileName _filename = @"C:\Users\zhaoqiang\Desktop\Japan_O
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
+
+#### 程序代码
+
+{% file src="../../../.gitbook/assets/form\_cig\_tmpimportopenso.rar" %}
+
+#### 数据模板
+
+{% file src="../../../.gitbook/assets/csag\_openso.xlsx" %}
 
