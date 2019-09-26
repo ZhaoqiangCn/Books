@@ -2,7 +2,7 @@
 
 ### Model-View-Controller
 
-![](../../.gitbook/assets/image%20%283%29.png)
+![](../../.gitbook/assets/image%20%284%29.png)
 
 Python处理URL的函数就是C：Controller，Controller负责业务逻辑，比如检查用户名是否存在，取出用户信息等等；
 
