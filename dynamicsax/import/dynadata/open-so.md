@@ -10,6 +10,8 @@ description: 期初上线阶段的Open销售订单导入
 
 ![&#x6570;&#x636E;&#x5F85;&#x5BFC;&#x5165;](../../../.gitbook/assets/image.png)
 
+{% code-tabs %}
+{% code-tabs-item title="示例" %}
 ```text
 //PO NUMBER 35
 //Line Number 5
@@ -307,6 +309,8 @@ void ImportDataTmpTable()
     }
 }
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 #### 程序代码
 
