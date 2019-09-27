@@ -544,3 +544,7 @@ static void ImportTBFADetailss(Args _args)
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
+{% file src="../../../.gitbook/assets/class\_cig\_golivedataimport.rar" %}
+
+{% file src="../../../.gitbook/assets/csagopenbalance.rar" %}
+
