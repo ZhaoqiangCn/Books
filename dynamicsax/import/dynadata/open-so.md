@@ -1,5 +1,5 @@
 ---
-description: 期初上线阶段的Open销售订单导入
+description: 期初的Open销售订单导入
 ---
 
 # Open SO

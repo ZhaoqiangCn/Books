@@ -1,3 +1,7 @@
+---
+description: 期初余额导入
+---
+
 # Opening Balance
 
 ### GL：总帐
