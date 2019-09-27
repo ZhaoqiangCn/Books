@@ -52,6 +52,7 @@
     * [Open SO](dynamicsax/import/dynadata/open-so.md)
     * [Open PO](dynamicsax/import/dynadata/open-po.md)
     * [Opening Balance](dynamicsax/import/dynadata/opening-balance.md)
+* [Access Right](dynamicsax/accessright.md)
 
 ## Other Skills
 
