@@ -30,6 +30,8 @@ description: 标准的AX项目实施流程
 
 在这个阶段，我们需要创建新的系统环境：Live 、Stage、Test、Dev，并且为新的环境配置系统参数。
 
+{% file src="../.gitbook/assets/sysconf\_systemconfiguration.rar" %}
+
 ### System development
 
 系统开发、测试
