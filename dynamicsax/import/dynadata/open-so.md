@@ -4,7 +4,7 @@ description: 期初上线阶段的Open销售订单导入
 
 # Open SO
 
-#### 预览
+### 预览
 
 首先导入中间表校验数据正确性
 
@@ -312,11 +312,11 @@ void ImportDataTmpTable()
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-#### 程序代码
+### 程序代码
 
 {% file src="../../../.gitbook/assets/form\_cig\_tmpimportopenso.rar" %}
 
-#### 数据模板
+### 数据模板
 
-{% file src="../../../.gitbook/assets/csag\_openso.xlsx" %}
+{% file src="../../../.gitbook/assets/csag\_openso.rar" %}
 
