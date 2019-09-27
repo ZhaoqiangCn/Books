@@ -1,5 +1,5 @@
 ---
-description: Recording my learning process
+description: DynamicsAX、Linux、Synology、Openwrt...
 ---
 
 # Home
