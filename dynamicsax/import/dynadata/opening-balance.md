@@ -1,6 +1,6 @@
 # Opening Balance
 
-### GL
+### GL：总帐
 
 {% code-tabs %}
 {% code-tabs-item title="Import GL" %}
@@ -79,7 +79,7 @@ static void ImportTBGL(Args _args)
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-### AP
+### AP：应付账款
 
 {% code-tabs %}
 {% code-tabs-item title="Import AP" %}
@@ -162,7 +162,7 @@ static void ImportTBAP(Args _args)
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-### AR/OR
+### AR/OR：应收账款，其他应收款
 
 AR和OR使用同一份模板， OR: other 
 
@@ -247,7 +247,7 @@ static void ImportTBAR(Args _args)
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-### INVENTORY
+### INVENTORY：存货
 
 导入存货的时候需要注意把序列号一并导入（如果有）
 
@@ -425,7 +425,7 @@ static void ImportTBInvent(Args _args)
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-### FA
+### FA：固定资产
 
 Fixed Assets 包括了固定资产卡片、购置、折旧，使用同一个模板用如下程序导入三次即可。
 
