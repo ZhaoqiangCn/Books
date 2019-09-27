@@ -12,9 +12,17 @@ description: 标准的AX项目实施流程
 
 业务流程分析
 
+{% file src="../.gitbook/assets/sum\_qa \(1\).rar" %}
+
 ### CRP
 
 建立业务流程模型、Gap List
+
+{% file src="../.gitbook/assets/businessprocess.rar" %}
+
+{% file src="../.gitbook/assets/gap-list.xlsx" %}
+
+{% file src="../.gitbook/assets/projectplan.rar" %}
 
 ### System Preparation
 
