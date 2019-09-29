@@ -54,6 +54,8 @@ description: 标准的AX项目实施流程
 
 期初数据整合
 
+{% page-ref page="import/" %}
+
 #### 静态数据
 
 * COA 财务科目
@@ -78,7 +80,7 @@ description: 标准的AX项目实施流程
 * Fixed Assets 固定资产
 * Opening Balance 期初余额
 
-{% page-ref page="import/" %}
+{% page-ref page="import/dynadata/" %}
 
 ### Go-live
 
