@@ -18,8 +18,8 @@
 ## Linux
 
 * [Synology](linux/synology/README.md)
-  * [群晖—-外部访问DDNS教程（第二部分）](linux/synology/qun-wai-bu-fang-wen-ddns-jiao-cheng-di-er-bu-fen.md)
   * [群晖—-外部访问DDNS教程（第一部分）](linux/synology/qun-wai-bu-fang-wen-ddns-jiao-cheng-di-yi-bu-fen.md)
+  * [群晖—-外部访问DDNS教程（第二部分）](linux/synology/qun-wai-bu-fang-wen-ddns-jiao-cheng-di-er-bu-fen.md)
   * [SpeedTest - Install](linux/synology/speedtest-install.md)
   * [BestTrace - Install](linux/synology/besttrace-install.md)
   * [Rclone - Install](linux/synology/rclone-install.md)
@@ -54,6 +54,8 @@
     * [Opening Balance](dynamicsax/import/dynadata/opening-balance.md)
 * [Access Right](dynamicsax/accessright.md)
 * [Process](dynamicsax/process.md)
+* [Instance](dynamicsax/instance/README.md)
+  * [DYNAMICS 365 FOR OPERATION INSTANCE](dynamicsax/instance/ax8.md)
 
 ## Other Skills
 
