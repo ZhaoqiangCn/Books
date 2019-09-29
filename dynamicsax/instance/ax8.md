@@ -1,3 +1,7 @@
+---
+description: '#AX8'
+---
+
 # DYNAMICS 365 FOR OPERATION INSTANCE
 
 _**Thanks for the author:**_
