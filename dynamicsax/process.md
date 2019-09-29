@@ -68,6 +68,8 @@ description: 标准的AX项目实施流程
 * Trade Agreement 协议价
 * ...
 
+{% page-ref page="import/stadata.md" %}
+
 #### 动态数据
 
 * Open PO 未结采购订单
