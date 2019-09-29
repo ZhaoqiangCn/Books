@@ -16,6 +16,8 @@ _**Thanks for the author:**_
 * Virtualization technology enabled computers \(PC or Laptop\).
 * Minimum 16 GB memory system.
 
+{% page-ref page="../../other-skills/office365.md" %}
+
 #### Below are the **steps to** download ****_**‘Dynamics 365 for Operations’**_ **package,**
 
 1. Login to [Microsoft Dynamics Lifecycle Services \(LCS\)](https://lcs.dynamics.com/)
