@@ -63,4 +63,5 @@
 * [Chromium](other-skills/chromium.md)
 * [GIT](other-skills/git/README.md)
   * [Command](other-skills/git/command.md)
+* [Office365](other-skills/office365.md)
 
