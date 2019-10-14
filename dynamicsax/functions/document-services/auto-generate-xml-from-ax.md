@@ -1,3 +1,7 @@
+---
+description: AX 自动生成 XML
+---
+
 # Auto Generate XML From AX
 
 ## 新建查询
