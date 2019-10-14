@@ -6,13 +6,25 @@
 
 ![](../../../.gitbook/assets/image.png)
 
+## 文档服务
+
+路径：工具 -&gt; 开发工具 -&gt; AIF -&gt; 创建、更新文档服务
+
 ![](../../../.gitbook/assets/image%20%283%29.png)
 
 ![](../../../.gitbook/assets/image%20%2811%29.png)
 
 ![](../../../.gitbook/assets/image%20%281%29.png)
 
+### 自动创建Pravite Project
+
+通过系统工具可以自动创建下图中的所有类，其中Job可以生成XML的XSD，CIG\_ICTradeOrderService是对应的文档服务名称
+
 ![](../../../.gitbook/assets/image%20%282%29.png)
+
+## XML文件
+
+如下代码描述了如何在服务器指定位置生成对应XML文件，执行如下程序可以把CIG\_ICTradeOrderTable中的指定数据根据Query中的数据结构生成对应的XML文件
 
 ```text
 static void ExportOrderXml(CIG_ICTradeOrderTable    _tradeOrderTable)
