@@ -1,5 +1,9 @@
 # Auto Generate XML From AX
 
+## 新建查询
+
+组织需要输出的数据，新建一个Query。注意新建的表需要有Index。
+
 ![](../../../.gitbook/assets/image.png)
 
 ![](../../../.gitbook/assets/image%20%283%29.png)
