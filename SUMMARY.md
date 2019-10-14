@@ -37,7 +37,8 @@
 ## DynamicsAX
 
 * [Functions](dynamicsax/functions/README.md)
-  * [Document Services](dynamicsax/functions/document-services.md)
+  * [Document Services](dynamicsax/functions/document-services/README.md)
+    * [Auto Generate XML From AX](dynamicsax/functions/document-services/auto-generate-xml-from-ax.md)
   * [Webservice](dynamicsax/functions/webservice.md)
   * [DB Connect](dynamicsax/functions/db-connect.md)
   * [DirectSQL](dynamicsax/functions/directsql.md)

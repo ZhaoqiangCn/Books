@@ -15,7 +15,7 @@
 </html>
 ```
 
-![](../../.gitbook/assets/image%20%285%29.png)
+![](../../.gitbook/assets/image%20%289%29.png)
 
 ### CSS
 
@@ -39,7 +39,7 @@ CSS是Cascading Style Sheets（层叠样式表）的简称，CSS用来控制HTML
 </html>
 ```
 
-![](../../.gitbook/assets/image%20%286%29.png)
+![](../../.gitbook/assets/image%20%2810%29.png)
 
 ### JavaScript
 
@@ -68,5 +68,5 @@ JavaScript虽然名称有个Java，但它和Java真的一点关系没有。JavaS
 </html>
 ```
 
-![](../../.gitbook/assets/image%20%281%29.png)
+![](../../.gitbook/assets/image%20%285%29.png)
 

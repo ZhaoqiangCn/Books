@@ -8,7 +8,7 @@ description: 期初的Open销售订单导入
 
 首先导入中间表校验数据正确性
 
-![&#x6570;&#x636E;&#x5F85;&#x5BFC;&#x5165;](../../../.gitbook/assets/image.png)
+![&#x6570;&#x636E;&#x5F85;&#x5BFC;&#x5165;](../../../.gitbook/assets/image%20%284%29.png)
 
 {% code-tabs %}
 {% code-tabs-item title="示例" %}
