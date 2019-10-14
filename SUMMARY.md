@@ -37,6 +37,7 @@
 ## DynamicsAX
 
 * [Functions](dynamicsax/functions/README.md)
+  * [Document Services](dynamicsax/functions/document-services.md)
   * [Webservice](dynamicsax/functions/webservice.md)
   * [DB Connect](dynamicsax/functions/db-connect.md)
   * [DirectSQL](dynamicsax/functions/directsql.md)
