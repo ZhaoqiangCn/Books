@@ -14,17 +14,17 @@ description: AX 自动生成 XML
 
 路径：工具 -&gt; 开发工具 -&gt; AIF -&gt; 创建、更新文档服务
 
-![](../../../.gitbook/assets/image%20%283%29.png)
+![](../../../.gitbook/assets/image%20%284%29.png)
 
-![](../../../.gitbook/assets/image%20%2811%29.png)
+![](../../../.gitbook/assets/image%20%2812%29.png)
 
-![](../../../.gitbook/assets/image%20%281%29.png)
+![](../../../.gitbook/assets/image%20%282%29.png)
 
 ### 自动创建Pravite Project
 
 通过系统工具可以自动创建下图中的所有类，其中Job可以生成XML的XSD，CIG\_ICTradeOrderService是对应的文档服务名称
 
-![](../../../.gitbook/assets/image%20%282%29.png)
+![](../../../.gitbook/assets/image%20%283%29.png)
 
 ## XML文件
 

@@ -14,5 +14,5 @@ vi /etc/config/network 编辑配置文件，修改LEDE管理地址
 # 设定DSN等信息
 ```
 
-![](../../.gitbook/assets/image%20%286%29.png)
+![](../../.gitbook/assets/image%20%287%29.png)
 
