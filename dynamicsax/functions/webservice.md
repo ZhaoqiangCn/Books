@@ -70,3 +70,5 @@ namespace CIG_WCF4AgileAX
 }
 ```
 
+{% file src="../../.gitbook/assets/cig\_wcf4agileax.zip" %}
+
