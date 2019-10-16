@@ -17,6 +17,10 @@
 
 ## Linux
 
+* [Google](linux/google/README.md)
+  * [Google Drive](linux/google/google-drive/README.md)
+    * [离线下载](linux/google/google-drive/aria2.md)
+  * [Chromium](linux/google/chromium.md)
 * [Synology](linux/synology/README.md)
   * [群晖—-外部访问DDNS教程（第一部分）](linux/synology/qun-wai-bu-fang-wen-ddns-jiao-cheng-di-yi-bu-fen.md)
   * [群晖—-外部访问DDNS教程（第二部分）](linux/synology/qun-wai-bu-fang-wen-ddns-jiao-cheng-di-er-bu-fen.md)
@@ -63,7 +67,6 @@
 ## Other Skills
 
 * [Markdown](other-skills/markdown.md)
-* [Chromium](other-skills/chromium.md)
 * [GIT](other-skills/git/README.md)
   * [Command](other-skills/git/command.md)
 * [Office365](other-skills/office365.md)
