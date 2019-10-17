@@ -18,7 +18,7 @@ description: 标准的AX项目实施流程
 
 业务流程模型、Gap List、项目计划的建立
 
-![](../.gitbook/assets/image%20%2813%29.png)
+![](../.gitbook/assets/image%20%2815%29.png)
 
 {% file src="../.gitbook/assets/businessprocess.rar" %}
 

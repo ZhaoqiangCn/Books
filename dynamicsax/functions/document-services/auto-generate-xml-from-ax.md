@@ -16,7 +16,7 @@ description: AX 自动生成 XML
 
 ![](../../../.gitbook/assets/image%20%284%29.png)
 
-![](../../../.gitbook/assets/image%20%2812%29.png)
+![](../../../.gitbook/assets/image%20%2813%29.png)
 
 ![](../../../.gitbook/assets/image%20%282%29.png)
 
