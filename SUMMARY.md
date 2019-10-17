@@ -22,6 +22,7 @@
     * [离线下载](linux/google/google-drive/aria2.md)
   * [Chromium](linux/google/chromium.md)
 * [Synology](linux/synology/README.md)
+  * [Youtube-dl](linux/synology/youtube-dl.md)
   * [群晖—-外部访问DDNS教程（第一部分）](linux/synology/qun-wai-bu-fang-wen-ddns-jiao-cheng-di-yi-bu-fen.md)
   * [群晖—-外部访问DDNS教程（第二部分）](linux/synology/qun-wai-bu-fang-wen-ddns-jiao-cheng-di-er-bu-fen.md)
   * [SpeedTest - Install](linux/synology/speedtest-install.md)
