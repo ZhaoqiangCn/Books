@@ -179,6 +179,18 @@
 
 [![](https://img.chyiyang.net/images/2019/01/27/15.png)](https://img.chyiyang.net/images/2019/01/27/15.png)
 
+#### 4.The “Strict-Transport-Security” HTTP header is not set to at least “15552000” seconds. For enhanced security, it is recommended to enable HSTS as described in the security tips.
+
+解决方法还是修改nextcloud绑定的网站配置文件，添加一行header信息
+
+```text
+add_header Strict-Transport-Security "max-age=63072000;";
+```
+
+![](https://bugxia.com/wp-content/uploads/2018/03/20180320071624472.png)
+
+保存即可生效
+
 #### **下面是我的**[**Nextcloud**](https://www.chyiyang.cn/tag/nextcloud/)**用得Nginx配置**
 
 1. ```text
