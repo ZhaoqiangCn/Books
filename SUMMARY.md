@@ -17,6 +17,10 @@
 
 ## Linux
 
+* [Navieboom](linux/navieboom.md)
+* [Telegram Bot](linux/telegram-bot/README.md)
+  * [RSSBot](linux/telegram-bot/rssbot.md)
+  * [TwitterBot](linux/telegram-bot/twitterbot.md)
 * [LetsEncrypt](linux/letsencrypt/README.md)
   * [ACME Create](linux/letsencrypt/acme.md)
   * [ACME Install](linux/letsencrypt/acme-install.md)
