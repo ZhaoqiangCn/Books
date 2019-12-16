@@ -1,2 +1,485 @@
 # NextCloud性能优化
 
+昨天，介绍了有关在[宝塔](https://www.chyiyang.cn/tag/bt/)面板下[配置](https://www.chyiyang.cn/tag/peizhi/)安装Nxtcloud15的教程，但是安装完成后，在后台的概览里显示安全设置及警告的提示信息。  
+[![&#x5B9D;&#x5854;&#x9762;&#x677F;&#x5B89;&#x88C5;Nextcloud15&#x7B80;&#x5355;&#x6559;&#x7A0B;](https://www.chyiyang.cn/wp-content/themes/Nana/timthumb.php?src=https://img.chyiyang.net/images/2019/01/25/QQ20190125221511.png&w=480&h=312&zc=1)宝塔面板安装Nextcloud15简单教程之前，我用centos7.4 + nginx + php7.2 + MariaDB的环境安装了Nextcloud14，之后版本大更新，想升级到Nextcloud15，结果不知道按错......阅读全文](https://www.chyiyang.cn/65.html)  
+如图：  
+[![](https://img.chyiyang.net/images/2019/01/27/1.png)](https://img.chyiyang.net/images/2019/01/27/1.png)  
+下面，我就总结下如何处理安全设置及告警提示信息。
+
+> 1、您的数据目录和文件可以从互联网直接访问。.htaccess 文件不起作用。强烈建议您配置 Web 服务器，以便数据目录不再可访问，或者你可以将数据目录移动到 Web 服务器文档根目录。
+
+解决方法是修改nextcloud绑定的网站配置文件，添加nextcloud常用目录禁止访问即可，加入下列代码
+
+1. ```text
+   location ~ ^/(?:build|tests|config|lib|3rdparty|templates|data)/ {
+   ```
+2. ```text
+       deny all;
+   ```
+3. ```text
+   }
+   ```
+
+[![](https://img.chyiyang.net/images/2019/01/27/2.png)](https://img.chyiyang.net/images/2019/01/27/2.png)
+
+> 2、PHP的安装似乎不正确，无法访问系统环境变量。getenv\("PATH"\)函数测试返回了一个空值。 请参照安装说明文档 ↗中的PHP配置说明查阅您服务器的PHP配置信息，特别是在使用[php](https://www.chyiyang.cn/tag/php/)-fpm时。
+
+从宝塔文件管理，打开/www/server/php/72/etc/php-fpm.conf，在其尾部添加一行
+
+1. ```text
+   env[PATH] = /usr/local/bin:/usr/bin:/bin:/usr/local/php/bin
+   ```
+
+保存并重启PHP即可解决该问题。
+
+[![](https://img.chyiyang.net/images/2019/01/27/3.png)](https://img.chyiyang.net/images/2019/01/27/3.png)
+
+> 3、通过 HTTP 访问网站不安全。强烈建议您将服务器设置成 HTTPS 协议，请查阅 安全贴士↗。
+
+如果以前申请过SSL，可以将crt和key用记事本打开，分别黏贴到下图中。  
+[![](https://img.chyiyang.net/images/2019/01/27/4.png)](https://img.chyiyang.net/images/2019/01/27/4.png)
+
+如果没有，也可注册宝塔会员，免费申请，申请完点击部署即可。
+
+[![](https://img.chyiyang.net/images/2019/01/27/5.png)](https://img.chyiyang.net/images/2019/01/27/5.png)
+
+> 4、您的网页服务器未正确设置以解析“/.well-known/caldav”。更多信息请参见文档。  
+> 您的网页服务器未正确设置以解析“/.well-known/carddav”。更多信息请参见文档。
+
+这两个警告可以一起解决，出现该提示一般是因为这两个路径的伪静态设置有问题，导致无法正常访问。  
+解决方法就是添加两行重定向配置
+
+1. ```text
+   rewrite /.well-known/carddav /remote.php/dav permanent;
+   ```
+2. ```text
+   rewrite /.well-known/caldav /remote.php/dav permanent;
+   ```
+
+[![](https://img.chyiyang.net/images/2019/01/27/6.png)](https://img.chyiyang.net/images/2019/01/27/6.png)
+
+> 5、未找到 PHP 的 "fileinfo" 模块。强烈推荐启用该模块，从而获得更好的 MIME 类型探测结果。
+
+因为php环境默认是没有安装fileinfo这个扩展模块的，所以需要手动去宝塔PHP管理选项中安装fileinfo扩展。
+
+[![](https://img.chyiyang.net/images/2019/01/27/77345a5863775ad90.png)](https://img.chyiyang.net/images/2019/01/27/77345a5863775ad90.png)
+
+> 6、内存缓存未配置，为了提升使用体验，请尽量配置内存缓存。更多信息请参见文档。
+
+安装php的Memcached和apcu模块（注意是memcached，非memcache），我选的是Memcached和apcu  
+[![](https://img.chyiyang.net/images/2019/01/27/8.png)](https://img.chyiyang.net/images/2019/01/27/8.png)  
+编译安装完毕之后，从宝塔面板打开/www/wwwroot/你的域名/config/config.php，手动给nextcloud的配置文件中添加一行设置，指定使用APCu作为缓存
+
+第1行为指定本地缓存为APCu，第2、3行为指定分布式缓存为Memcached
+
+1. ```text
+     'memcache.local' => '\\OC\\Memcache\\APCu',
+   ```
+2. ```text
+     'memcache.distributed' => '\\OC\\Memcache\\Memcached',
+   ```
+3. ```text
+     'memcached_servers' => 
+   ```
+4. ```text
+     array (
+   ```
+5. ```text
+       0 => 
+   ```
+6. ```text
+       array (
+   ```
+7. ```text
+         0 => 'localhost',
+   ```
+8. ```text
+         1 => 11211,
+   ```
+9. ```text
+       ),
+   ```
+10. ```text
+     );
+    ```
+
+[![](https://img.chyiyang.net/images/2019/01/27/9.png)](https://img.chyiyang.net/images/2019/01/27/9.png)
+
+> 7、PHP 的 OPcache 模块未载入。推荐开启获得更好的性能。
+
+安装php的opcache扩展模块  
+[![](https://img.chyiyang.net/images/2019/01/27/11.png)](https://img.chyiyang.net/images/2019/01/27/11.png)  
+并改为下图的参数
+
+1. ```text
+       opcache.enable=1
+   ```
+2. ```text
+       opcache.enable_cli=1
+   ```
+3. ```text
+       opcache.interned_strings_buffer=8
+   ```
+4. ```text
+       opcache.max_accelerated_files=10000
+   ```
+5. ```text
+       opcache.memory_consumption=128
+   ```
+6. ```text
+       opcache.save_comments=1
+   ```
+7. ```text
+       opcache.revalidate_freq=1
+   ```
+
+[![](https://img.chyiyang.net/images/2019/01/27/13.png)](https://img.chyiyang.net/images/2019/01/27/13.png)
+
+> 8、该实例缺失了一些推荐的PHP模块。为提高性能和兼容性，我们强烈建议安装它们。
+>
+> imagick
+
+安装php的imagemagick扩展模块
+
+[![](https://img.chyiyang.net/images/2019/01/27/14.png)](https://img.chyiyang.net/images/2019/01/27/14.png)
+
+> 9、数据库中的一些列由于进行长整型转换而缺失。由于在较大的数据表重改变列类型会耗费一些时间，因此程序没有自动对其更改。您可以通过[命令](https://www.chyiyang.cn/tag/mingling/)行手动执行 "occ db:convert-filecache-bigint" 命令以应用挂起的更改。该操作需要当整个实例变为离线状态后执行。查阅相关文档以获得更多详情。
+
+* filecache.mtime
+* filecache.storage\_mtime
+
+通过SSH登录到服务器的命令模式下，并cd到站点目录下，输入
+
+1. ```text
+   php occ db:add-missing-indices
+   ```
+
+提示如下信息  
+[![](https://img.chyiyang.net/images/2019/01/27/QQ20190123173017.png)](https://img.chyiyang.net/images/2019/01/27/QQ20190123173017.png)
+
+意思是需要使用www用户权限来修改，再次输入
+
+1. ```text
+   sudo -u www php occ db:add-missing-indices
+   ```
+
+提示如下图信息，并输入 y
+
+[![](https://img.chyiyang.net/images/2019/01/27/QQ20190123173131.png)](https://img.chyiyang.net/images/2019/01/27/QQ20190123173131.png)
+
+[![](https://img.chyiyang.net/images/2019/01/27/QQ20190123172641.png)](https://img.chyiyang.net/images/2019/01/27/QQ20190123172641.png)
+
+> 10、HTTP的请求头 “Referrer-Policy” 未设置为 “no-referrer”, “no-referrer-when-downgrade”, “strict-origin” or “strict-origin-when-cross-origin”. 这会导致信息泄露。
+
+需要设置一个Referrer-Policy请求头来提高安全性。
+
+1. ```text
+   add_header Referrer-Policy "no-referrer";
+   ```
+
+[![](https://img.chyiyang.net/images/2019/01/27/15.png)](https://img.chyiyang.net/images/2019/01/27/15.png)
+
+#### **下面是我的**[**Nextcloud**](https://www.chyiyang.cn/tag/nextcloud/)**用得Nginx配置**
+
+1. ```text
+   server
+   ```
+2. ```text
+   {
+   ```
+3. ```text
+       #基础配置，这些可以照搬宝塔的配置
+   ```
+4. ```text
+       listen 80;
+   ```
+5. ```text
+       listen 443 ssl http2;
+   ```
+6. ```text
+       server_name www.chyiyang.net;
+   ```
+7. ```text
+       index index.php index.html index.htm default.php default.htm default.html;
+   ```
+8. ```text
+       root /www/wwwroot/www_chyiyang_net;
+   ```
+9. ```text
+
+   ```
+10. ```text
+        ssl_certificate    /etc/letsencrypt/live/www.chyiyang.net/fullchain.pem;
+    ```
+11. ```text
+        ssl_certificate_key    /etc/letsencrypt/live/www.chyiyang.net/privkey.pem;
+    ```
+12. ```text
+        ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+    ```
+13. ```text
+        ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:HIGH:!aNULL:!MD5:!RC4:!DHE;
+    ```
+14. ```text
+        ssl_prefer_server_ciphers on;
+    ```
+15. ```text
+        ssl_session_cache shared:SSL:10m;
+    ```
+16. ```text
+        ssl_session_timeout 10m;
+    ```
+17. ```text
+
+    ```
+18. ```text
+        error_page 497 https://$host$request_uri;
+    ```
+19. ```text
+        #nextcloud包含了403和404的错误页面
+    ```
+20. ```text
+        error_page 403 /core/templates/403.php;
+    ```
+21. ```text
+        error_page 404 /core/templates/404.php;
+    ```
+22. ```text
+
+    ```
+23. ```text
+        #HSTS、缓存设置
+    ```
+24. ```text
+        add_header Strict-Transport-Security "max-age=15768000; includeSubDomains; preload;";
+    ```
+25. ```text
+        large_client_header_buffers 4 16k;
+    ```
+26. ```text
+        client_max_body_size 10G; 
+    ```
+27. ```text
+        fastcgi_buffers 64 4K;
+    ```
+28. ```text
+        gzip off;
+    ```
+29. ```text
+
+    ```
+30. ```text
+        #宝塔默认是include调用PHP相关配置，这里稍稍修改了一下，注意php版本
+    ```
+31. ```text
+        #加入了front_controller_active这项参数以删除页面URL中的index.php
+    ```
+32. ```text
+        location ~ [^/]\.php(/|$)
+    ```
+33. ```text
+        {
+    ```
+34. ```text
+            try_files $uri =404;
+    ```
+35. ```text
+            fastcgi_pass  unix:/tmp/php-cgi-72.sock;
+    ```
+36. ```text
+            fastcgi_index index.php;
+    ```
+37. ```text
+            include fastcgi.conf;
+    ```
+38. ```text
+    	    include pathinfo.conf;
+    ```
+39. ```text
+    	    fastcgi_param front_controller_active true;
+    ```
+40. ```text
+        }
+    ```
+41. ```text
+        #一键申请SSL证书验证目录相关设置
+    ```
+42. ```text
+        location ~ \.well-known{
+    ```
+43. ```text
+            allow all;
+    ```
+44. ```text
+        }
+    ```
+45. ```text
+
+    ```
+46. ```text
+        #nextcloud一些关键目录的权限设置
+    ```
+47. ```text
+        location ~ ^/(data|config|\.ht|db_structure\.xml|README) {
+    ```
+48. ```text
+            deny all;
+    ```
+49. ```text
+        }
+    ```
+50. ```text
+        #静态资源重定向1
+    ```
+51. ```text
+        location ~* \/core\/(?:js\/oc\.js|preview\.png).*$ {
+    ```
+52. ```text
+            rewrite ^ /index.php last;
+    ```
+53. ```text
+        }
+    ```
+54. ```text
+        #webdav重定向
+    ```
+55. ```text
+        location / {
+    ```
+56. ```text
+            rewrite ^ /index.php$uri;
+    ```
+57. ```text
+            rewrite ^/caldav(.*)$ /remote.php/caldav$1 redirect;
+    ```
+58. ```text
+            rewrite ^/carddav(.*)$ /remote.php/carddav$1 redirect;
+    ```
+59. ```text
+            rewrite ^/webdav(.*)$ /remote.php/webdav$1 redirect;
+    ```
+60. ```text
+            rewrite ^(/core/doc/[^\/]+/)$ $1/index.html;
+    ```
+61. ```text
+        #静态资源重定向2,支持使用acme脚本在申请证书时对域名的验证
+    ```
+62. ```text
+         if ($uri !~* (?:\.(?:css|js|svg|gif|png|html|ttf|woff)$|^\/(?:remote|public|cron|status|ocs\/v1|ocs\/v2)\.php|^\/\.well-known\/acme-challenge\/.*$)){
+    ```
+63. ```text
+             rewrite ^ /index.php last;
+    ```
+64. ```text
+            }
+    ```
+65. ```text
+        }
+    ```
+66. ```text
+
+    ```
+67. ```text
+        #静态资源重定向3
+    ```
+68. ```text
+        location ~* \.(?:png|html|ttf|ico|jpg|jpeg)$ {
+    ```
+69. ```text
+            try_files $uri /index.php$uri$is_args$args;
+    ```
+70. ```text
+            access_log off;
+    ```
+71. ```text
+        }
+    ```
+72. ```text
+
+    ```
+73. ```text
+        location ~ ^/(?:updater|ocs-provider)(?:$|/) {
+    ```
+74. ```text
+            try_files $uri/ =404;
+    ```
+75. ```text
+            index index.php;
+    ```
+76. ```text
+        }
+    ```
+77. ```text
+
+    ```
+78. ```text
+        #对静态资源添加header
+    ```
+79. ```text
+        location ~ \.(?:css|js|woff|svg|gif)$ {
+    ```
+80. ```text
+            try_files $uri /index.php$uri$is_args$args;
+    ```
+81. ```text
+            add_header Cache-Control "public, max-age=15778463";
+    ```
+82. ```text
+            add_header X-Content-Type-Options nosniff;
+    ```
+83. ```text
+            add_header X-XSS-Protection "1; mode=block";
+    ```
+84. ```text
+            add_header X-Robots-Tag none;
+    ```
+85. ```text
+            add_header X-Download-Options noopen;
+    ```
+86. ```text
+            add_header X-Permitted-Cross-Domain-Policies none;
+    ```
+87. ```text
+    		add_header Referrer-Policy "no-referrer";
+    ```
+88. ```text
+            access_log off;
+    ```
+89. ```text
+        }
+    ```
+90. ```text
+        #caldav和#carddav
+    ```
+91. ```text
+        rewrite /.well-known/carddav /remote.php/dav permanent;
+    ```
+92. ```text
+        rewrite /.well-known/caldav /remote.php/dav permanent;
+    ```
+93. ```text
+        location ~ .*\.(gif|jpg|jpeg|png|bmp|swf|js|css)$
+    ```
+94. ```text
+        {
+    ```
+95. ```text
+            expires      30d;
+    ```
+96. ```text
+            access_log off; 
+    ```
+97. ```text
+        }
+    ```
+98. ```text
+        #access_log  /www/wwwlogs/www.chyiyang.net.log;
+    ```
+99. ```text
+    }
+    ```
+
+好了，就写到这了，希望对大家有所帮助，文笔有限，望谅解~~**本文地址：**[https://www.chyiyang.cn/66.html](https://www.chyiyang.cn/66.html)  
+**本文标题：**Nextcloud15的安全及设置警告优化处理方法  
+**版权声明：**本站所有文章除特别声明外，均采用 [署名-非商业性使用-禁止演绎 4.0 国际](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh) 许可协议。请尊重他人的劳动成果，转载请写明出处！
+
