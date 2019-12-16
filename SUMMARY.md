@@ -17,6 +17,9 @@
 
 ## Linux
 
+* [NextCloud](linux/nextcloud/README.md)
+  * [NextCloud创建](linux/nextcloud/buildnextcloud.md)
+  * [NextCloud性能优化](linux/nextcloud/optimizenextcloud.md)
 * [Google](linux/google/README.md)
   * [Google Drive](linux/google/google-drive/README.md)
     * [离线下载](linux/google/google-drive/aria2.md)

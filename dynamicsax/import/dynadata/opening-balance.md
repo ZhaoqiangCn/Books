@@ -6,8 +6,7 @@ description: 期初余额导入
 
 ### GL：总帐
 
-{% code-tabs %}
-{% code-tabs-item title="Import GL" %}
+{% code title="Import GL" %}
 ```text
 static void ImportTBGL(Args _args)
 {
@@ -80,13 +79,11 @@ static void ImportTBGL(Args _args)
     info(strfmt("%1 records imported",numImported));
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ### AP：应付账款
 
-{% code-tabs %}
-{% code-tabs-item title="Import AP" %}
+{% code title="Import AP" %}
 ```text
 static void ImportTBAP(Args _args)
 {
@@ -163,15 +160,13 @@ static void ImportTBAP(Args _args)
     info(strfmt("%1 records imported",numImported));
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ### AR/OR：应收账款，其他应收款
 
 AR和OR使用同一份模板， OR: other 
 
-{% code-tabs %}
-{% code-tabs-item title="Import AR/OR" %}
+{% code title="Import AR/OR" %}
 ```text
 static void ImportTBAR(Args _args)
 {
@@ -248,15 +243,13 @@ static void ImportTBAR(Args _args)
     info(strfmt("%1 records imported",numImported));
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ### INVENTORY：存货
 
 导入存货的时候需要注意把序列号一并导入（如果有）
 
-{% code-tabs %}
-{% code-tabs-item title="Import Inventory" %}
+{% code title="Import Inventory" %}
 ```text
 static void ImportTBInvent(Args _args)
 {
@@ -426,15 +419,13 @@ static void ImportTBInvent(Args _args)
 
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ### FA：固定资产
 
 Fixed Assets 包括了固定资产卡片、购置、折旧，使用同一个模板用如下程序导入三次即可。
 
-{% code-tabs %}
-{% code-tabs-item title="Import FA" %}
+{% code title="Import FA" %}
 ```text
 static void ImportTBFADetailss(Args _args)
 {
@@ -545,8 +536,7 @@ static void ImportTBFADetailss(Args _args)
 
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 ### 程序代码
 

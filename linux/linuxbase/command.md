@@ -16,14 +16,12 @@ description: Ubuntu&Debian 常用命令
 * -h ：将文件容量以较易读的方式（GB，kB等）列出来 
 * -R ：连同子目录的内容一起列出（递归列出），等于该目录下的所有文件都会显示出来  
 
-{% code-tabs %}
-{% code-tabs-item title="这些参数也可以组合使用，下面举两个例子：" %}
+{% code title="这些参数也可以组合使用，下面举两个例子：" %}
 ```text
 ls -l #以长数据串的形式列出当前目录下的数据文件和目录 
 ls -lR #以长数据串的形式列出当前目录下的所有文件
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 #### grep
 
@@ -53,8 +51,7 @@ ls -lR #以长数据串的形式列出当前目录下的所有文件
 
 #### Rclone
 
-{% code-tabs %}
-{% code-tabs-item title="Google" %}
+{% code title="Google" %}
 ```text
 nohup rclone -v mount myspacesh:CopyFromShare /root/myspacesh --allow-other --dir-cache-time 2h --buffer-size 32M --poll-interval 5m --tpslimit 2 &
 nohup rclone -v mount myspaceshto:CopyFromShare /root/myspaceshto --allow-other --dir-cache-time 2h --buffer-size 32M --poll-interval 5m --tpslimit 2 &
@@ -62,21 +59,18 @@ fusermount -u /root/myspaceshto
 rclone copy -v myspacesh:CopyFromShare/'TPimage MegaPack' myspaceshto:CopyFromShare/inbox/'TPimage MegaPack'
 rclone copy -v drivefrom:CopyFromShare/M1-50 driveto:CopyFromShare/M1-250
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 #### Shell脚本
 
-{% code-tabs %}
-{% code-tabs-item title="Shell" %}
+{% code title="Shell" %}
 ```text
 #!/bin/bash
 echo "Hello world!"
 
 chmod +x hello.sh
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endcode %}
 
 
 
